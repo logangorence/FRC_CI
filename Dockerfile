@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install PPA support
 RUN apt-get update > /dev/null 2>&1 \
-	&& apt-get install -yq software-properties-common > /dev/null 2>&1
+	&& apt-get install -yq software-properties-common g++ > /dev/null 2>&1
 
 # Installl tools for build script
 RUN apt-get install -yq git cmake wget > /dev/null 2>&1

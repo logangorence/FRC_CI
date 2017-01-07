@@ -1,6 +1,6 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 
-MAINTAINER Benjamin Ward "ward.programm3r@gmail.com"
+MAINTAINER Logan Gorence "loganjohngorence@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -22,10 +22,7 @@ RUN apt-get install -yq frc-toolchain > /dev/null 2>&1
 
 WORKDIR /build
 
-COPY resources/ci.sh /build/ci.sh
-
 COPY resources/wpilib.version /build/wpilib.version
 
 ADD resources/cpp.zip /wpilib
 
-CMD ["/bin/bash", "/build/ci.sh"]

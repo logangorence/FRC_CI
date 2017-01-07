@@ -22,7 +22,3 @@ RUN apt-get install -yq frc-toolchain > /dev/null 2>&1
 
 WORKDIR /build
 
-COPY resources/wpilib.version /build/wpilib.version
-
-ADD resources/cpp.zip /wpilib
-
